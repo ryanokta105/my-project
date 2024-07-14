@@ -63,7 +63,7 @@
                 <a href="/kategori">
                     <button type="button" class="btn btn-secondary mx-2" data-bs-dismiss="modal">Batal</button>
                 </a>
-                <button type="submit" class="btn btn-primary">Tambah</button>
+                <button type="submit" class="btn btn-primary">Edit</button>
             </div>
         </div>
     </form>

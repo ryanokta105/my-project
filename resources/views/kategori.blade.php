@@ -24,7 +24,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" aria-current="page" href="/kategori">Home</a>
+                        <a class="nav-link text-white fw-bold active" aria-current="page" href="/kategori">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" aria-current="page" href="/klasifikasi">Klasifikasi</a>
                     </li>
                     <li class="nav-item position-absolute top-0 start-0 ls-3 mt-2 ms-2">
                         <form action="/logout" method="POST">

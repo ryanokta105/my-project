@@ -20,32 +20,27 @@
         </div>
     </nav>
 
-    <form action="{{ route('update', $edit_kategori->kode_kategori) }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('update_klasifikasi', $edit_klasifikasi->id) }}" method="POST"
+        enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="container mt-3 w-50">
             <div class="mb-3">
-                <label for="disabledTextInput" class="form-label">Kode Kategori</label>
-                <input type="text" id="disabledTextInput" name="kode_kategori" class="form-control"
-                    value="{{ $edit_kategori->kode_kategori }}" required>
+                <label for="disabledTextInput" class="form-label">Klasifikasi</label>
+                <select class="form-select" name="klasifikasi" aria-label="Default select example">
+                    <option selected>{{ $edit_klasifikasi->klasifikasi }}</option>
+                    <option value="Elekstronik">Elektronik</option>
+                    <option value="Fashon">Fashon</option>
+                    <option value="Aksesoris">Aksesoris</option>
+                </select>
             </div>
             <div class="mb-3">
-                <label for="disabledTextInput" class="form-label">Kategori</label>
-                <input type="text" id="disabledTextInput" name="jenis" class="form-control"
-                    value="{{ $edit_kategori->jenis }}" required>
-            </div>
-            <div class="mb-3">
-                <label for="disabledTextInput" class="form-label">Gambar</label>
-                <div class="input-group">
-                    <input type="file" class="form-control" name="gambar" id="inputGroupFile02"
-                        value="{{ $edit_kategori->gambar }}">
-                </div>
-                <div class="gambar mt-3">
-                    <img src="{{ asset('storage/' . $edit_kategori->gambar) }}" alt="" style="width: 30%;">
-                </div>
+                <label for="disabledTextInput" class="form-label">Barang</label>
+                <input type="text" id="disabledTextInput" name="kode_barang" class="form-control"
+                    value="{{ $kode_barang }}" disabled>
             </div>
             <div class="modal-footer mb-5">
-                <a href="/kategori">
+                <a href="/klasifikasi">
                     <button type="button" class="btn btn-secondary mx-2" data-bs-dismiss="modal">Batal</button>
                 </a>
                 <button type="submit" class="btn btn-primary">Edit</button>
